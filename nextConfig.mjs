@@ -5,5 +5,6 @@ const nextConfig = {
     staleTimes: 120,
     bundlePagesRouterDependencies: true,
   },
+  reactStrictMode: false,
 };
 export default nextConfig;

@@ -1,5 +1,6 @@
-import "@/shared/styles/global.css";
+import "@/shared/styles/globals.css";
 import { inter } from "@/shared/constants";
+import { Header } from "@/widgets";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,7 +13,10 @@ type TRootLayout = { children: Readonly<React.ReactNode> }
 export default function RootLayout({ children }: TRootLayout) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.className}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

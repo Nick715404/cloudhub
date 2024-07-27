@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -26,8 +26,7 @@ const config: Config = {
         "orange-800": "#8C3111",
         "orange-700": "#B53F15",
         "orange-600": "#F5551B",
-        "orange-500":
-          "linear-gradient(180deg, rgba(251,67,44,1) 0%, rgba(255,89,30,1) 100%)",
+        "orange-500": "#FD5322",
         "orange-400": "#FF7A4B",
         "orange-300": "#FF9068",
         "orange-200": "#FFB398",
@@ -52,6 +51,16 @@ const config: Config = {
         md: { max: "767px" },
         sm: { max: "639px" },
       },
+      backgroundImage: {
+        "orange-linear":
+          "linear-gradient(180deg, rgba(251,67,44,1) 0%, rgba(255,89,30,1) 100%)",
+      },
+      borderRadius: {
+        "btn-default": "39px",
+      },
+      transitionDuration: {
+        standart: 'all .15s ease'
+      }
     },
   },
   plugins: [],

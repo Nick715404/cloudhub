@@ -1,0 +1,7 @@
+.link {
+  @apply px-1 py-1 block
+}
+
+.button {
+  @apply relative block text-center px-[20px] py-[10px] bg-orange-500 text-white rounded-btn-default text-sm font-semibold leading-6 border border-orange-500 hover:bg-transparent hover:text-black transition-all
+}
