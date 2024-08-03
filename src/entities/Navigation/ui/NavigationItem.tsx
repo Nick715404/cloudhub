@@ -1,12 +1,17 @@
-import { TLink } from "@/shared/constants";
-import Link from "next/link"
+import { TLink } from '@/shared/constants';
+import Link from 'next/link';
 
-type NavigationItemProps = { link: TLink }
+type NavigationItemProps = { link: TLink };
 
 export const NavigationItem = ({ link }: NavigationItemProps) => {
-  return (
-    <li className="">
-      <Link className="block transition-all hover:scale-105" href={link.path}>{link.label}</Link>
-    </li>
-  );
+	return (
+		<li>
+			<Link
+				className='relative px-2 block transition-all hover:text-orange-500 after:absolute after:w-full after:h-1 after:bg-orange-500 after:-bottom-4 after:left-0 after:opacity-0 after:transition-all hover:after:opacity-100'
+				href={link.path}
+			>
+				{link.label}
+			</Link>
+		</li>
+	);
 };
