@@ -1,7 +1,5 @@
-'use client'
+'use client';
 
 export default function ErrorPage(error: Error) {
-  return (
-    <main>error</main>
-  )
+	return <div className='container'>Error page {error.message}</div>;
 }
