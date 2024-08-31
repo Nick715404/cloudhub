@@ -1,32 +1,36 @@
 import Image from 'next/image';
 import { RunnerLineLogo } from '../model/types';
 import { Fragment } from 'react';
+import Marquee from 'react-fast-marquee';
 
 type Props = { logos: RunnerLineLogo[] };
 
 export const RunnerLine = ({ logos }: Props) => {
 	return (
-		<section>
+		<section className='py-8'>
 			<div className='container'>
-				<div className='logos'>
-					{[...Array(2)].map((_, index) => (
+				<Marquee pauseOnHover>
+					{[...Array(1)].map((_, index) => (
 						<Fragment key={index}>
-							<div className='whitespace-nowrap'>
+							<div>
 								{logos.map((img, index) => (
 									<Image
 										width={140}
 										height={60}
 										key={index}
 										src={img.path}
-										style={{ height: 'auto' }}
-										className='h-auto'
+										style={{
+											width: 'auto',
+											display: 'inline',
+											margin: '0 40px',
+										}}
 										alt={`Logo of - ${img.title}`}
 									/>
 								))}
 							</div>
 						</Fragment>
 					))}
-				</div>
+				</Marquee>
 			</div>
 		</section>
 	);

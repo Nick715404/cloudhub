@@ -5,7 +5,6 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 
 export const LoginButton = () => {
 	const session = useSession();
-	console.log(session);
 
 	return (
 		<div className='flex items-center flex-row-reverse gap-5'>

@@ -1,3 +1,4 @@
+import { transform } from 'next/dist/build/swc';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -60,6 +61,15 @@ const config: Config = {
 			},
 			transitionDuration: {
 				standart: 'all .15s ease',
+			},
+			keyframes: {
+				slide: {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-100%)' },
+				},
+			},
+			animation: {
+				'marquee-slide': '9s slide infinite linear',
 			},
 		},
 	},
