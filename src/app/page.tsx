@@ -1,6 +1,8 @@
-import { Button } from '@/entities';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/entities';
+import { logos } from '@/shared/constants';
+import { RunnerLine } from '@/widgets/RunnerLine';
 
 export default function Home() {
 	return (
@@ -31,13 +33,15 @@ export default function Home() {
 				</div>
 				<div className='absolute bottom-[12rem] left-0 w-full aspect-[2/1] pointer-events-none'>
 					<Image
-						src='/png/home-hero-banner.png'
+						src='/png/home-hero-banner.webp'
 						alt='Our partners'
 						fill
 						priority
 					/>
 				</div>
 			</section>
+
+			<RunnerLine logos={logos} />
 		</div>
 	);
 }
