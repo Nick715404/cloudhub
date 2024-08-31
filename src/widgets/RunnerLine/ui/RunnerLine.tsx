@@ -22,8 +22,8 @@ export const RunnerLine = ({ logos }: Props) => {
 										style={{
 											width: 'auto',
 											display: 'inline',
-											margin: '0 40px',
 										}}
+										className='mx-10 md:mx-5'
 										alt={`Logo of - ${img.title}`}
 									/>
 								))}

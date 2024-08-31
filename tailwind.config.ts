@@ -22,6 +22,7 @@ const config: Config = {
 				'black-50': '#F9F9F9',
 
 				white: '#fff',
+				grey: '#FAFAFA',
 
 				'orange-900': '#6B250D',
 				'orange-800': '#8C3111',

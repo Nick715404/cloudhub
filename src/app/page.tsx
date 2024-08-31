@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/entities';
+import { Button, SidesSection } from '@/entities';
 import { logos } from '@/shared/constants';
 import { RunnerLine } from '@/widgets/RunnerLine';
 
@@ -42,6 +42,42 @@ export default function Home() {
 			</section>
 
 			<RunnerLine logos={logos} />
+
+			<SidesSection
+				tag='Share'
+				title='Share anything you’re working on.'
+				text="Campsite has been instrumental in keeping designers aware of each others work-in-progress in a way that was previously slowing us down. It's also one of the only channels where."
+				linkLabel='See how it works'
+				linkPath='#'
+				imageAlt='Share anything you’re working on.'
+				imageSrc='/png/public-api-check.png'
+				imageWidth={531}
+				imageHeight={337}
+			>
+				<ul className='flex items-center gap-7 mb-10'>
+					<li className='flex items-center gap-2'>
+						<Image src='/svg/check.svg' alt='' width={24} height={24} />
+						<span>Coded</span>
+					</li>
+					<li className='flex items-center gap-2'>
+						<Image src='/svg/check.svg' alt='' width={24} height={24} />
+						<span>100% Secure</span>
+					</li>
+				</ul>
+			</SidesSection>
+
+			<SidesSection
+				tag='Feedback'
+				title='Better feedback at the right time.'
+				text="Campsite has been instrumental in keeping designers aware of each others' work-in-progress in a way that was previously slowing us down. It's also one of the only channels where."
+				linkLabel='See how it works'
+				linkPath='#'
+				imageAlt='Share anything you’re working on.'
+				imageSrc='/png/feedback-banner.png'
+				imageWidth={358}
+				imageHeight={361}
+				turnAround
+			/>
 		</div>
 	);
 }
