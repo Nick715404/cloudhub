@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button, SidesSection } from '@/entities';
-import { logos } from '@/shared/constants';
+import { homePageCards, logos, overviews } from '@/shared/constants';
 import { RunnerLine } from '@/widgets/RunnerLine';
+import { CardList } from '@/widgets/CardList/ui';
+import { LinksList } from '@/widgets/LinksList/LinksList';
+import { BannerSection } from '@/entities/BannerSection/ui';
+import { ReviewsSwiper } from '@/widgets/ReviewsSwiper/ui/ReviewsSwiper';
 
 export default function Home() {
 	return (
@@ -42,7 +46,6 @@ export default function Home() {
 			</section>
 
 			<RunnerLine logos={logos} />
-
 			<SidesSection
 				tag='Share'
 				title='Share anything you’re working on.'
@@ -67,8 +70,8 @@ export default function Home() {
 			</SidesSection>
 
 			<SidesSection
-				tag='Feedback'
 				title='Better feedback at the right time.'
+				tag='Feedback'
 				text="Campsite has been instrumental in keeping designers aware of each others' work-in-progress in a way that was previously slowing us down. It's also one of the only channels where."
 				linkLabel='See how it works'
 				linkPath='#'
@@ -78,6 +81,74 @@ export default function Home() {
 				imageHeight={361}
 				turnAround
 			/>
+
+			<section className=' relative bg-orange-500 py-20 md:h-auto'>
+				<div className='container'>
+					<div className=''>
+						<span className='block text-center text-white mb-[4px] md:text-left'>
+							Best time here
+						</span>
+						<h2 className='text-center text-white mb-[64px] text-section-title md:text-left md:mb-3'>
+							Better feedback at the right time.
+						</h2>
+						<div className=''>
+							<LinksList />
+							<CardList cards={homePageCards} />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className='my-28'>
+				<div className='container'>
+					<div>
+						<h2 className='text-center text-section-title mb-10'>
+							Your Archive of progress
+						</h2>
+						<div className='flex items-center justify-between gap-8 md:flex-col'>
+							<BannerSection
+								title='Projects'
+								subTitle='Organize, follow, and archive.'
+								imgSettings={{
+									imgPath: '/png/overview.png',
+									imgAlt: 'Organize, follow, and archive.',
+									maxWidth: 495,
+									maxHeight: 380,
+									aspectRatio: '1.2/1',
+								}}
+							/>
+							<BannerSection
+								title='Member profiles'
+								subTitle='Automatic portfolios of your work.'
+								imgSettings={{
+									imgPath: '/png/new-leads.png',
+									imgAlt: 'Automatic portfolios of your work.',
+									maxWidth: 495,
+									maxHeight: 320,
+									aspectRatio: '1.8/1',
+									bottom: '-3rem',
+								}}
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className='bg-grey py-12 md:py-6'>
+				<div className='container'>
+					<ReviewsSwiper slides={overviews} />
+				</div>
+			</section>
+
+			<section className='py-20'>
+				<div className='container'>
+					<div className=''>
+						<h2 className='text-section-title text-center mb-14'>
+							Loved By Designers At
+						</h2>
+					</div>
+				</div>
+			</section>
 		</div>
 	);
 }

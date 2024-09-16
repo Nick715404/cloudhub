@@ -43,11 +43,11 @@ export const SidesSection = ({
 	return (
 		<section className='py-20'>
 			<div
-				className={`container flex items-center gap-10 justify-between ${
+				className={`container flex items-center gap-10 lg:gap-2 justify-between ${
 					turnAround && 'flex-row-reverse'
-				}`}
+				} md:flex-col-reverse md:items-start`}
 			>
-				<div className='w-1/2'>
+				<div className='w-1/2 sm:w-[100%] md:w-9/12'>
 					<span className='bg-orange-500 px-[14px] py-[4px] text-white rounded-full block w-fit mb-4'>
 						{tag}
 					</span>
@@ -66,7 +66,7 @@ export const SidesSection = ({
 						</Link>
 					</div>
 				</div>
-				<div className='w-[48%] bg-grey rounded-3xl flex items-center justify-center'>
+				<div className='w-[48%] bg-grey rounded-3xl flex items-center justify-center md:w-full'>
 					<Image
 						width={imageWidth}
 						height={imageHeight}

@@ -4,7 +4,7 @@ import { MobileMenu } from '@/entities/MobileMenu';
 
 export const Header = () => {
 	return (
-		<header className='fixed top-0 left-0 w-full z-20 bg-white py-[18px] lg:py-[11px]'>
+		<header className='fixed top-0 left-0 w-full z-20 bg-white py-[12px] lg:py-[11px]'>
 			<div className='container'>
 				<div className='flex items-center justify-between'>
 					<div className='flex gap-[70px]'>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const Logo = () => {
 	return (
-		<Link href='/' className='group'>
+		<Link href='/' className='group flex items-center justify-center'>
 			<Image
 				width={105}
 				height={25}

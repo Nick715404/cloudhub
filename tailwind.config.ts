@@ -1,4 +1,3 @@
-import { transform } from 'next/dist/build/swc';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -46,13 +45,6 @@ const config: Config = {
 				s: '14px',
 				xs: '12px',
 			},
-			screens: {
-				'2xl': { max: '1535px' },
-				xl: { max: '1279px' },
-				lg: { max: '1025px' },
-				md: { max: '769px' },
-				sm: { max: '641px' },
-			},
 			backgroundImage: {
 				'orange-linear':
 					'linear-gradient(180deg, rgba(251,67,44,1) 0%, rgba(255,89,30,1) 100%)',
@@ -73,14 +65,16 @@ const config: Config = {
 				'marquee-slide': '9s slide infinite linear',
 			},
 		},
+		screens: {
+			'3xl': { max: '2561px ' },
+			'2xl': { max: '1536px' },
+			xl: { max: '1280px' },
+			lg: { max: '1024px' },
+			md: { max: '768px' },
+			sm: { max: '640px' },
+		},
 	},
 	darkMode: 'class',
 	plugins: [],
 };
 export default config;
-
-// - TODO
-// - 1) Подключить NextAuth
-// - 2) Сделать плавную смену темы
-// - 3) Сделать бургер меню
-// - 4) Подумать над анимациями

@@ -6,7 +6,7 @@ type NavigationProps = { links: TNavLinks };
 export const Navigation = ({ links }: NavigationProps) => {
 	return (
 		<nav className='lg:hidden'>
-			<ul className='flex gap-[20px]'>
+			<ul className='flex gap-[10px]'>
 				{links.map(item => (
 					<NavigationItem link={item} key={item.id} />
 				))}
